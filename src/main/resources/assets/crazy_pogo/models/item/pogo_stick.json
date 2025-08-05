@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/handheld",
+	"textures": {
+		"layer0": "crazy_pogo:item/pogo_stick"
+	}
+}
