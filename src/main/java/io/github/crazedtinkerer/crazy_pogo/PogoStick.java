@@ -1,13 +1,11 @@
 package io.github.crazedtinkerer.crazy_pogo;
 
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
