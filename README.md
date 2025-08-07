@@ -1,19 +1,9 @@
 <!--suppress HtmlDeprecatedTag, XmlDeprecatedElement -->
-<center><img alt="mod preview" src="https://upload.wikimedia.org/wikipedia/commons/7/70/Example.png"/></center>
 
-<center>
-A short quick summary of this mod
-</center>
+<img alt="Modfest: Toybox banner" src="modfest-banner.svg"></img>
 
----
+Adds a pogo stick that lets you bounce off blocks in any direction!
 
-A long description of your mod, including 
-- Dot point lists of all features
-
-`path/to/config/files` if you have them
-
-Screenshots of features where possible
-
----
-
-A footnote for special thanks, credits, and other shoutouts - including "created at modfest" banners.
+Right-clicking a block with the pogo stick will bounce away from it. 
+The strength of the bounce scales with your current speed, so with a high place to jump off of
+and some good timing, you can fling yourself through the air at amazing speeds!
