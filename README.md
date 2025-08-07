@@ -1,6 +1,6 @@
 <!--suppress HtmlDeprecatedTag, XmlDeprecatedElement -->
 
-<a href="https://modfest.net/toybox"><img alt="Modfest: Toybox banner" src="modfest-banner.svg"></img></a>
+<a href="https://modfest.net/toybox"><img alt="Modfest: Toybox banner" src="https://raw.githubusercontent.com/ModFest/art/refs/heads/v2/badge/svg/toybox/compact.svg"></img></a>
 
 Adds a pogo stick that lets you bounce off blocks in any direction!
 
