@@ -1,8 +1,11 @@
 package io.github.crazedtinkerer.crazy_pogo;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.Vec3d;
@@ -25,7 +28,8 @@ public class PogoStick extends Item {
 
 		double bounceSpeed = oldVelocity.length() * 2; //TODO: Reduce bounce force if player is sneaking?
 		player.addVelocity(lookVector.multiply(-1 * bounceSpeed));
-		//TODO: Add sound effect (maybe the wind burst sound?)
+		World world = context.getWorld();
+		world.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.ENTITY_SLIME_SQUISH, SoundCategory.NEUTRAL, 0.5F, 0.8F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
 
 		return ActionResult.SUCCESS;
 	}
