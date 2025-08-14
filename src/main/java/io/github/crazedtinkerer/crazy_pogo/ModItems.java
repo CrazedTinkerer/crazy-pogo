@@ -13,7 +13,10 @@ import java.util.function.Function;
 
 public class ModItems {
 
-	public static final Item POGO_STICK = register("pogo_stick", PogoStick::new, new Item.Settings());
+	public static final Item POGO_STICK = register(
+		"pogo_stick",
+		PogoStick::new,
+		new Item.Settings().maxCount(1).useCooldown(0.5F)); // TODO: The maxCount works but not the useCooldown?????
 
 	public static void initialize(){
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS)
