@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "equipment",
+	"pattern": [
+		"iii",
+		" i ",
+		"wsw"
+	],
+	"key": {
+		"i": "minecraft:iron_ingot",
+		"w": "#minecraft:wool",
+		"s": "minecraft:slime_block"
+	},
+	"result": {
+		"id": "crazy_pogo:pogo_stick"
+	},
+	"show_notification": true
+}
