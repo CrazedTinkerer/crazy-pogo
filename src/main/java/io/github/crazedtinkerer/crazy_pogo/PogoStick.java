@@ -24,7 +24,8 @@ public class PogoStick extends Item {
 		Vec3d oldVelocity = player.getVelocity();
 		Vec3d lookVector = Vec3d.fromPolar(player.getPitch(), player.getYaw());
 
-		double bounceSpeed = oldVelocity.length() * 2; //TODO: Reduce bounce force if player is sneaking?
+		double bounceMultiplier = player.isSneaking() ? 1.5 : 2;
+		double bounceSpeed = Math.max(oldVelocity.length(), 0.3) * bounceMultiplier;
 		player.addVelocity(lookVector.multiply(-1 * bounceSpeed));
 		World world = context.getWorld();
 		world.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.ENTITY_SLIME_SQUISH, SoundCategory.NEUTRAL, 0.5F, 0.8F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
