@@ -23,7 +23,14 @@ public class PogoStick extends Item {
 	public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
 		Vec3d bounceVelocity = bounceUser(user);
 
-		entity.addVelocity(bounceVelocity.negate());
+		bounceVelocity = bounceVelocity.negate().multiply(2);
+
+		double minYVelocity = 0.1;
+		if (entity.isOnGround() && bounceVelocity.y < minYVelocity){
+			bounceVelocity = new Vec3d(bounceVelocity.x, minYVelocity, bounceVelocity.z);
+		}
+
+		entity.addVelocity(bounceVelocity);
 
 		applyCooldown(stack, user);
 		return ActionResult.SUCCESS;
